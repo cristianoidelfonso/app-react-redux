@@ -134,7 +134,7 @@ const App = () => {
               </li>
               <li className="nav-item">
                 <a 
-                  href="/login" 
+                  href="/" 
                   className="nav-link" 
                   onClick={logOut}>
                     Logout
@@ -163,8 +163,8 @@ const App = () => {
 
         <div className="container mt-3">
           <Routes>
-            <Route path="/home" element={<Home />} />
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
