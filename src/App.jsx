@@ -133,12 +133,12 @@ const App = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a 
-                  href="/login" 
+                <Link 
+                  to={"/login"} 
                   className="nav-link" 
                   onClick={logOut}>
                     Logout
-                </a>
+                </Link>
               </li>
             </div>
           ) : (
