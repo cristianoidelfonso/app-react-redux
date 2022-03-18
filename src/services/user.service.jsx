@@ -19,8 +19,14 @@ const getAdminBoard = () => {
   return axios.get(API_URL + "admin", { headers: authHeader() });
 };
 
+
+
 const getCategories = () => {
   return axios.get(API_URL + "categories", { headers: authHeader() });
+};
+
+const getBrands = () => {
+  return axios.get(API_URL + "brands", { headers: authHeader() });
 };
 
 export default {
@@ -29,4 +35,5 @@ export default {
   getModeratorBoard,
   getAdminBoard,
   getCategories,
+  getBrands,
 };

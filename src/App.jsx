@@ -11,14 +11,15 @@ import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 
-import Users from "./components/Users";
-import Categories from "./components/Categories";
-import Brands from "./components/Brands";
-import Products from "./components/Products";
+import Users from "./pages/users";
+import Categories from "./pages/categories";
+import Brands from "./pages/brands";
+import Products from "./pages/products";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
+import InfoModal from "./pages/categories/InfoModal";
 
 const App = () => {
 
@@ -176,6 +177,8 @@ const App = () => {
             <Route path="/brands" element={<Brands />} />
             <Route path="/products" element={<Products />} />
             
+            <Route path="/modal" element={<InfoModal />} />
+          
           </Routes>
         </div>
       </div>

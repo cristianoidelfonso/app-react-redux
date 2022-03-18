@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from 'react-router-dom';
 import Form from "react-validation/build/form";
@@ -9,9 +9,9 @@ import { login } from "../actions/auth";
 const required = (value) => {
   if (!value) {
     return (
-      <div className="alert alert-danger" role="alert">
+      <small className="text-danger" role="alert">
         This field is required!
-      </div>
+      </small>
     );
   }
 };

@@ -8,7 +8,7 @@ const BoardUser = () => {
   useEffect(() => {
     UserService.getUserBoard().then(
       (response) => {
-        console.log(response.data)
+        // console.log(response.data)
         // setContent(response.data);
       },
       (error) => {
