@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5055/';
+const API_URL = 'https://teste-mypharma.herokuapp.com/';
 
 const register = async (name, email, password) => {
   const payload = {

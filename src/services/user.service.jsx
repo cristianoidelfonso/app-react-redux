@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-const API_URL = "http://localhost:5055/";
+const API_URL = "https://teste-mypharma.herokuapp.com/";
 
 const getPublicContent = () => {
   return axios.get(API_URL);
