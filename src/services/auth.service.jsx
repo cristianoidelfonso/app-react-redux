@@ -1,13 +1,15 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API_URL = "http://localhost:3000/";
+const API_URL = 'http://localhost:5055/';
 
-const register = (name, email, password) => {
-  return axios.post(`${API_URL}users`, {
-    name,
-    email,
-    password,
-  });
+const register = async (name, email, password) => {
+  const payload = {
+    name: name,
+    email: email,
+    password: password
+  }
+
+  return axios.post(`${API_URL}users`, payload, headers );
 };
 
 const login = (email, password) => {
