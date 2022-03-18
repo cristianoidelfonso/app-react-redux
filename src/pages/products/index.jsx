@@ -11,7 +11,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect( async () => {
-    const response = await axios.get(`http://localhost:3000/products`, { headers: authHeader() });
+    const response = await axios.get(`http://localhost:5055/products`, { headers: authHeader() });
     setProducts(response.data);
   }, [products]);
 

@@ -25,7 +25,7 @@ const Categories = () => {
       description: description
     }
     
-    axios.post(`http://localhost:3000/categories`, payload, { headers: authHeader() })
+    axios.post(`http://localhost:5055/categories`, payload, { headers: authHeader() })
       .then((response) => {
         setCategories(response.data);
         handleClose();
@@ -38,7 +38,7 @@ const Categories = () => {
   }
 
   useEffect(async () => {
-    const response = await axios.get(`http://localhost:3000/categories`,{ headers: authHeader() })
+    const response = await axios.get(`http://localhost:5055/categories`,{ headers: authHeader() })
     setCategories(response.data);
   }, [categories]);
 

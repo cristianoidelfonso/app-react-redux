@@ -20,7 +20,7 @@ const Brands = () => {
     e.preventDefault();
     // console.log({ name });
     
-    axios.post(`http://localhost:3000/brands`, { name }, { headers: authHeader() })
+    axios.post(`http://localhost:5055/brands`, { name }, { headers: authHeader() })
       .then((response) => {
         setBrands(response.data);
         handleClose();
@@ -32,7 +32,7 @@ const Brands = () => {
   }
 
   useEffect(async () => {
-    const response = await axios.get(`http://localhost:3000/brands`,{ headers: authHeader() })
+    const response = await axios.get(`http://localhost:5055/brands`,{ headers: authHeader() })
     setBrands(response.data);
   }, [brands]);
 
