@@ -63,7 +63,7 @@ const App = () => {
               </Link>
             </li>
 
-            {showModeratorBoard && (
+            {/* {showModeratorBoard && (
               <li className="nav-item">
                 <Link 
                   to={"/mod"} 
@@ -71,9 +71,9 @@ const App = () => {
                     Moderator Board
                 </Link>
               </li>
-            )}
+            )} */}
 
-            {showAdminBoard && (
+            {/* {showAdminBoard && (
               <li className="nav-item">
                 <Link 
                   to={"/admin"} 
@@ -81,17 +81,17 @@ const App = () => {
                     Admin Board
                 </Link>
               </li>
-            )}
+            )} */}
 
             {currentUser && (
               <>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link 
                     to={"/user"} 
                     className="nav-link">
                       User
                   </Link>
-                </li>
+                </li> */}
               
             
                 <li className="nav-item">
@@ -168,9 +168,10 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/user" element={<BoardUser />} />
-            <Route path="/mod" element={<BoardModerator />} />
-            <Route path="/admin" element={<BoardAdmin />} />
+
+            {/* <Route path="/user" element={<BoardUser />} /> */}
+            {/* <Route path="/mod" element={<BoardModerator />} /> */}
+            {/* <Route path="/admin" element={<BoardAdmin />} /> */}
             
             <Route path="/users" element={<Users />} />
             <Route path="/categories" element={<Categories />} />
@@ -178,6 +179,7 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             
             <Route path="/modal" element={<InfoModal />} />
+            <Route path='*' element={<Home />} />
           
           </Routes>
         </div>
